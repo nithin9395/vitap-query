@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body bgcolor="#dddee0">
+
+
+
+<div class="containerA">
+    <div>
+        <h1 class="chess-color head-size center"> VIT-AP QUERIES </h1>
+    </div>
+    <div style="margin-left:10px;">
+        <img src="vitlogo.png" alt="vitap" width="130" height="130">
+    </div>
+</div>
+<hr type="solid" color="black" size="10px" class="line">
+
+<div class="containerB">
+    <div class="containerB1">
+        <h3 class="margin-text">
+            Your Questions get answered here!!<br>
+            <br>
+            <br>
+            Please take a moment to fill out the user details<br>
+            to submit your queries.
+        </h3>
+        <div class="container-underB1">
+            <img src="left2.jpeg" alt="chess" width="569px;" height="320px">
+        </div>
+
+    </div>
+
+    <div class="containerB2">
+        <div class="form-container" >
+            <h1 class="center upper-gap" style="color:black; font-family:sans-serif;">Sign up</h1>
+
+            <form method="POST" action="my2.php">
+                <div class="input-wrapper">
+                    <span>
+                        <h2 class="center"> Username: &nbsp; &nbsp; &nbsp;  </h2>
+                    </span>
+                    <input type="text" name="username" autocomplete="off" class="input-box" placeholder="Enter your username" style="text-align:center;">
+                    <span class="chess-color">
+                        <h1> * </h1>
+                    </span>
+                </div>
+
+                <div class="input-wrapper">
+                    <span>
+                        <h2 class="center"> Password: </h2>
+                    </span>
+                    <input type="password" name="password" class="input-box" placeholder="Enter your password" style="text-align:center">
+                    <span class="chess-color">
+                        <h1> * </h1>
+                    </span>
+                </div>
+
+                <div class="input-wrapper">
+                    <span>
+                        <h2 class="center"> Retype Password: </h2>
+                    </span>
+                    <input type="password" name="passwordconfirm" class="input-box" placeholder="Enter your password again" style="text-align:center">
+                    <span class="chess-color">
+                        <h1> * </h1>
+                    </span>
+                </div>
+
+                <div class="input-wrapper">
+                    <span>
+                        <h2> Your Email ID: &nbsp; &nbsp; &nbsp;</h2>
+                    </span>
+                    <input type="text" name="email"  class="input-box" placeholder="Enter your Email ID" style="text-align:center;">
+                    <span class="chess-color">
+                        <h1> * </h1>
+                    </span>
+                </div>
+
+                <div class="submit-div">
+                    <button type="submit" class="submit-button" onclick="redirectToPage">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="sign-in">
+    <a href="s.html" style="text-decoration:none;" class="sign-in1" >
+    Already have an account? sign in here </a>
+</div>
+
+<script>
+    function showPopupMessage(message) {
+        const popup = document.getElementById("passwordError");
+        popup.innerHTML = message;
+        popup.classList.remove("hidden-popup");
+        document.querySelector(".submit-button").disabled = true; 
+    }
+
+    function hidePopupMessage() {
+        const popup = document.getElementById("passwordError");
+        popup.classList.add("hidden-popup");
+        document.querySelector(".submit-button").disabled = false; 
+    }
+
+    document.getElementById("acceptCheckbox").addEventListener("change", function() {
+        document.querySelector(".submit-button").disabled = !this.checked;
+    });
+
+    function redirectToPage(){
+        windows.location.href="index.html"
+    }
+    </script>
+
+
+</body>
+</html>
